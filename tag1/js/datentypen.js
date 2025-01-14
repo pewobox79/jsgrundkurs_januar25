@@ -22,6 +22,10 @@ const bigInteger = 234232332423 //gerade zahl groß
 const numberAsString = "22";
 const number = 22;
 const addTwoNumbers = numberAsString + ' ' + number;
+
+const undefinedType = undefined;
+const nullType = null;
+
 // wenn number und string mit +-zeichen verbunden werden, dann kein mathematische operator sondern erstellt neuen string
 //console.log("ergebnis", addTwoNumbers)
 
@@ -57,7 +61,12 @@ const fullname = objectPerson.firstname + ' ' + objectPerson.lastname;
 
 const arrayData = [
 
-    { firstname: "peter", address: { street: "" } },
+    {
+        firstname: "peter",
+        address: {
+            street: ""
+        }
+    },
     { firstname: "klaus", address: { street: "" } },
     { firstname: "peter", address: { street: "strasse" } },
     { firstname: "klaus", address: { street: "" } },

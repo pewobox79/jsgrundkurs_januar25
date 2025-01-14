@@ -1,5 +1,6 @@
-const arrayData = [
 
+
+const arrayData = [
     { firstname: "peter", address: { street: "" }},
     { firstname: "klaus", address: { street: "" } },
     { firstname: "martin", address: { street: "strasse" } },
@@ -7,6 +8,7 @@ const arrayData = [
     { firstname: "heinz", address: { street: "" } },
     { firstname: "stefan", address: { street: "" } },
 ];
+
 
 //iteration in array
 //FOR LOOP
@@ -24,9 +26,17 @@ for (let i = 0; i < arrayData.length; i++) {
 // forEach
 //forEach bekommt eine CallBack function die den eigentlichen Arbeitsprozess startet
 //RUCKSACK für datensatz nach jeder iterierung ist die temporär variable USER in der Klammer
-let loops = 0;
-arrayData.forEach((user) => {
 
+let loops = 0;
+
+arrayData.forEach((user, index, arrayData) => {
+
+    //methode kann max 3 parameter tragen:
+    // => ein item 
+    // => index (namenskonvention)
+    // => gesamtes array
+
+    console.log("index in foreach", index, arrayData)
     if (user.firstname === "sepp") {
         console.log("ja, ich bin der Sepp");
     } else if (user.firstname === "stefan") {
