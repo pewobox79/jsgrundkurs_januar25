@@ -1,5 +1,5 @@
-//Übungsfunktionen
-//rückgabe eine fullname (beispiel "Mein Name ist John Doe");
+//ÜBUNGSFUNKTIONEN
+//Rückgabe eine fullname (beispiel "Mein Name ist John Doe");
 //Filterung der Kontakte nach alter Kleiner oder gleich 30;
 //Berechnung des Altersdurchschnitts aller Kontakte;
 
@@ -45,3 +45,62 @@ const contacts = [
         age: "55"
     }
 ];
+
+//hier der code
+
+//funktion 1
+
+const getFullname = (firstname, lastname) => {
+
+    return `Mein Name ist ${firstname} ${lastname}`
+
+}
+
+contacts.forEach(item => {
+
+    const fullname = getFullname(item.firstname, item.lastname)
+    console.log( fullname);
+})
+
+//alternative nur einen ausgewählten kontakt
+const fullname = getFullname(contacts[0].firstname, contacts[0].lastname)
+console.log("contact index 0", fullname)
+
+
+
+
+
+//funktion 2
+
+const getContactsByAge30 = (data) => {
+    //data-property steht für contacts array
+    return data.filter(item => item.age <= 30)
+}
+
+const newList = getContactsByAge30(contacts);
+console.log("list younger than 30", newList);
+
+
+
+
+
+
+
+
+//funktion 3
+
+const calculateAvg = (data) => {
+    let totalAge = 0; //final ist totalAge 145;
+    data.forEach((contact) => {
+        totalAge = totalAge + Number(contact.age);
+    })
+
+    return totalAge / data.length
+
+
+}
+
+const total = calculateAvg(contacts)
+console.log("avg", total)
+
+
