@@ -1,4 +1,4 @@
-const getUsers = async()=>{
+export const getUsers = async()=>{
 
 
     try{
@@ -16,4 +16,9 @@ const getUsers = async()=>{
     }
 
 
+}
+
+export const deleteUser=()=>{
+
+    console.log("user deleted")
 }
