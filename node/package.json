@@ -1,0 +1,16 @@
+{
+  "name": "firstnode",
+  "version": "1.0.0",
+  "description": "neuer server",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Peter Wolf",
+  "license": "MIT",
+  "devDependencies": {
+    "nodemon": "^3.1.9"
+  }
+}
